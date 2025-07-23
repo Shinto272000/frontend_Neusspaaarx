@@ -53,12 +53,12 @@ const Products = ({ showAlert }) => {
   )
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-900">Products</h1>
+    <div className="px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 space-y-4 sm:space-y-0">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Products</h1>
         <Link
           to="/add-product"
-          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-center"
         >
           Add New Product
         </Link>
@@ -80,15 +80,16 @@ const Products = ({ showAlert }) => {
         </div>
       </div>
 
+      {/* Products Grid */}
       <ProductList 
         products={filteredProducts}
         onEdit={handleEdit}
         onDelete={handleDelete}
-        loading={loading}
       />
     </div>
   )
 }
 
 export default Products
+
 
